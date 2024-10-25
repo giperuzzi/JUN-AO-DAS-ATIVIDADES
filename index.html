@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+    <div class="conteiner">
+        <h2 contenteditable="true">CARD</h2>
+    </div>
+    
+    <input type="number" id="numero" min="10" max="100" value="24">
+    
+    <script>
+        const numero = document.getElementById("numero");
+        const cabecalho = document.querySelector('h2');
+        cabecalho.style.fontSize = numero.value + "px";
+        numero.addEventListener("input", ()=> {
+            cabecalho.style.fontSize = numero.value + "px";
+
+        });
+    </script>
+</body>
+</html>
